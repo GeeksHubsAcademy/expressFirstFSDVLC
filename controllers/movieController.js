@@ -18,6 +18,10 @@ class Pelicula {
         return ("las mas votadas son blalbalablablablabllab");
     }
 
+    createNewFilm(film){
+        console.log(film);
+    }
+
 }
 
 

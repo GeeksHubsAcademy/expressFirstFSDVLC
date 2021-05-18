@@ -39,6 +39,17 @@ router.get('/:titulo',async (req, res) => {
     }
 });
 
+router.post('/',async (req, res) => {
+    try {
+        const film = req.body.peli;
+        res.json(await movieController.createNewFilm(film));
+    }catch (err) {
+        return res.status(500).json({
+            message: err.message
+        });
+    }
+});
+
 
 
 module.exports = router;
